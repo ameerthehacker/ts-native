@@ -142,8 +142,6 @@ Static:                         'static' ;
 Yield:                          'yield' ;
 
 //keywords:
-
-Any : 'any';
 Number: 'number';
 Boolean: 'boolean';
 String: 'string';

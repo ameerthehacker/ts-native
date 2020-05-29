@@ -104,8 +104,7 @@ primaryType
     ;
 
 predefinedType
-    : Any
-    | Number
+    : Number
     | Boolean
     | String
     | Symbol
