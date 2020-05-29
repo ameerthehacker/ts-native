@@ -1,0 +1,55 @@
+{
+  "name": "ts-native",
+  "version": "0.0.1",
+  "description": "Build performant native apps using TypeScript subset",
+  "main": "src/main.ts",
+  "scripts": {
+    "start": "ts-node src/main.ts",
+    "test": "jest",
+    "prettify": "prettier --write",
+    "lint-staged": "eslint --fix",
+    "lint": "eslint --fix src/** --ext .ts",
+    "gen-grammar": "sh ./scripts/gen-grammar.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ameerthehacker/ts-native.git"
+  },
+  "keywords": [
+    "native",
+    "typescript"
+  ],
+  "author": "Ameer Jhan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ameerthehacker/ts-native/issues"
+  },
+  "homepage": "https://github.com/ameerthehacker/ts-native#readme",
+  "dependencies": {
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.3"
+  },
+  "devDependencies": {
+    "eslint": "^7.1.0",
+    "husky": "^4.2.5",
+    "jest": "^26.0.1",
+    "lint-staged": "^10.2.7",
+    "prettier": "^2.0.5",
+    "ts-jest": "^26.0.0",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^2.34.0"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,html,json,scss,css,md,yml}": [
+      "npm run prettify"
+    ],
+    "*.{spec,js,ts,tsx}": [
+      "npm run lint-staged"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
